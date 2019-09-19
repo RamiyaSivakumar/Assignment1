@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+if [ -z $1 ]; then
+echo "Please enter upto four terms that you would like to convert into a wordcloud."
+else
+echo $1 $2 $3 $4 > wcgen.txt
+wordcloud_cli --text wcgen.txt --imagefile wordcloud.png
+fi
